@@ -1,0 +1,130 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  background-color: Gainsboro;
+}
+html {
+  background-color: Gainsboro;
+  height: 100%;
+}
+
+a: visited {
+  text-decoration: none;
+}
+a: focus {
+  text-decoration: none;
+}
+a: active {
+  text-decoration: none;
+}
+.custom-navlink {
+  color: black;
+}
+.custom-navlink:hover {
+  text-decoration: none;
+  background-color: black;
+}
+h1 {
+  margin-top: 100px;
+  color: black;
+  font-size: 50px;
+}
+.custom-h2 {
+  color: black;
+
+}
+.custom-h2:hover {
+  font-size: 35px;
+  transition: all 0.5s;
+}
+
+.header-div {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 100vw;
+    background: #3498db;
+    min-width: 100vw;
+    height: 200px;
+}
+
+nav{
+  display: inline-block;
+
+}
+
+.nav-selection-container {
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: White;
+  width: 50%;
+}
+.nav-selection-container:hover {
+    border-bottom-style: solid;
+    transition: all 0.2s;
+}
+
+i {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div {
+  text-align: center;
+}
+h3 {
+  word-break: break-all;
+}
+
+.custom-input {
+
+}
+
+.custom-link {
+
+}
+
+.gray-div {
+  background-color: Gainsboro;
+}
+
+input {
+  text-align: center;
+
+}
+input:focus {
+  transform: scale(1.2);
+  transition: all 1.0s;
+}
+
+.custom-thumbnail {
+  box-shadow: 10px 10px 5px #888888;
+  border-color: white;
+}
+.custom-thumbnail:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+}
+
+.waiting-msg {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.active {
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+}
+
+.welcome-text-hidden {
+  opacity: 0;
+}
+.welcome-text {
+    opacity: 1;
+    transition: all 2.0s;
+}
