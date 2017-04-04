@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 export default React.createClass({
   render() {
     return(
-      <Link {...this.props} className="custom-navlink" activeClassName="active"/>
+      <Link {...this.props}  activeClassName="active"/>
     )
   }
 })

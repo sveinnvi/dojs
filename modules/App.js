@@ -16,14 +16,9 @@ export default React.createClass({
             <Nav bsStyle="pills" role="nav">
               <Grid>
                 <Row>
-                  <Col md={6}>
+                  <Col md={12}>
                     <div className="nav-selection-container">
-                      <NavItem><NavLink to="/football"><h2 className="custom-h2">Fótbolti</h2></NavLink></NavItem>
-                    </div>
-                  </Col>
-                  <Col md={6}>
-                    <div className="nav-selection-container">
-                      <NavItem><NavLink to="/handball"><h2 className="custom-h2">Handbolti</h2></NavLink></NavItem>
+                      <NavItem><NavLink to="/CodingPage/start"><h1 className="custom-h2">start</h1></NavLink></NavItem>
                     </div>
                   </Col>
                 </Row>

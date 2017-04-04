@@ -5,8 +5,8 @@ export default React.createClass({
   render() {
     return (
       <div className='gray-div'>
-        <div>
-          <h1 className='welcome-text'>Smelltu á fótbolta eða handbolta</h1>
+        <div className="code-editor">
+          <h1 className='welcome-text'>Home...</h1>
         </div>
       </div>
     )

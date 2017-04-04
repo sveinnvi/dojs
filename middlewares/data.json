@@ -1,0 +1,62 @@
+{
+  "start": {
+    "feedback": "Vel gert! Ekki svo flókið.\r\n Svona virkar tölur í mjög grófum dráttum. Heiltölur eru alltaf heilar (t.d. 1 eða 20) á meðan fleytitölur geta haft brot (t.d. 1.5 eða 10.0). Talan sem þú reiknaðir má sjá í keyrsluniðurstöðunum hér fyrir ofan.",
+    "path": "lessonone",
+    "instructions": "Strengir er einfaldlega bara texti sem getur líka verið með tölum. Strengir eru afmarkaðir af gæsalöppum sitthvoru megin (t.d. \"Rófa\" eða \"Ég hef 2 rófur.\"). Hægt er að beita + virkjanum á strengi líka en það setur strengina einfaldlega saman í einn streng.\r\n Prófaðu að setja saman tvo strengi.",
+    "lessonFunction": "lessonStart(req.body.codeFromUser)"
+  },
+  "lessonone": {
+    "feedback": "Vel af sér vikið! Þú fékkst strenginn hér fyrir ofan.",
+    "path": "lessontwo",
+    "instructions": "Fleiri virkjar eru til eins og til dæmis modulus (%). En % virkinn skilar afgangi af heiltöludeilingu.\r\n Prófaðu að skrifa 10%3 og sjáðu hvað þú færð.",
+    "lessonFunction": "lessonOne(req.body.codeFromUser)"
+  },
+  "lessontwo": {
+    "feedback": "Talan fyrir ofan er afgangurinn sem kæmi ef fyrri talan þín er deild með seinni tölunni þinni.\r\n Mikilvægt er að átta sig á því að á meðan 3%2 = 1 þá er 3/2 = 1.5.",
+    "path": "lessonthree",
+    "instructions": "Í forritun eru breytur mikið notaðar, öll gildi eru bundnar í breytum. Breyta er eins og x og y í algebru. x er einhver breyta sem geymir gildi í sér.\r\nDæmi:\r\nvar x = 16;\r\n var nafn = \"Jón\";\r\n Hér fyrir ofan má sjá tvær breytur, breytan x hefur gildið 16 (heiltala) og breytan nafn hefur gildið \"Jón\" (Strengur). Taktu eftir því að fyrir framan breytunöfnin má sjá \"var\" en það þýðir að verið er að skilgreina breyturnar x og nafn og þannig verða þær til. Eftir að breytur hafa verið skilgreindar einu sinni þá má vinna með þær í forritinu fram og aftur án þess að taka fram \"var\". Ef reynt yrði að gefa breytunni x einhvað gildi án skilgreiningar þá gæfist villumelding.\r\n Dæmi:\r\n var x = 16;\r\n x = x + 5;\r\n Í dæminu hér fyrir ofan er breytan x skilgreind með gildið 16 í efri línunni. Í neðri línunni er breytunni svo gefið nýtt gildi, en henni er gefið sitt gamla gildi en með 5 viðbættum, semsagt 16 + 5 eða 21 ! Taktu eftir að í seinni línu er ekki notað \"var\" aftur enda var búið að skilgreina breytuna í línunni fyrir ofan.\r\n Prófaðu að skilgreina breytuna x og tvöfalda svo gildi hennar með því að nota breytuna x hægra megin við jafnaðarmerkið eins í dæminu hér á undan.",
+    "lessonFunction": "lessonTwo(req.body.codeFromUser)"
+  },
+  "lessonthree": {
+    "feedback": "Svona er hægt að meðhöndla breytur án þess að vita í raun hvaða gildi hún hefur að geyma, með því að skrifa x = 2*x ertu búinn að tvöfalda gildi x.",
+    "path": "lessonfour",
+    "instructions": "Mikið er unnið með samanburði í forritun og ákvarðanir eru teknar út frá niðurstöðum samanburða.\r\n Algengustu samanburðirnir eru:\r\n a stærri en b (a>b),\r\n a minni en b (a<b),\r\n a stærri eða jafnt b (a>=b),\r\n a minni eða jafnt og b (a<=b),\r\n og loks a jafnt og b (a==b).\r\n Jafnaðarmerkið (=) hefur fleiri en eina merkingu í forritun. Ef eitt jafnaðarmerki er notað eins og sást í liðnum hér á undan (x = 16) þá er verið að gefa breytunni x gildið 16. Hins vegar ef tvö jafnaðarmerki eru notuð (x == 16) þá er verið að spyrja hvort x sé 16. Þetta kallast samanburður og samanburður skilar sanngildi.\r\n Sanngildin eru tvö: satt (true) eða ósatt (false). Þegar (x == 16) er keyrt er tvennt í stöðunni, annað hvort er x raunverulega jafnt 16 og þá skilar samanburðurinn true. Ef x er ekki jafnt og 16, hvort sem x er önnur tala, strengur eða einhvað annað sanngildi, þá skilar samanburðurinn false.\r\n Nú höfum við farið yfir samanburði og sanngildi, en það tvennt nýtist í næsta viðfangsefni, if og else skipanir.\r\n if og else skipanir athuga einhvern samanburð og bregðast svo við niðurstöðunum úr þeim á einhvern hátt. Þetta sést best með dæmi:\r\n if(x > 10) {\r\n x = x+5; \r\n } else { \r\n x = x-5 \r\n } \r\n Þetta einfalda forrit er að gera nokkra hluti. Innan if(...) skipunarinnar er athugaður einhver samanburður, ef samanburðurinn skilar true (x er þá stærra en 10) þá er forritstextinn innan slaufusviganna {...} keyrður. Hinsvegar ef samanburðurinn skilar false (x er þá ekki stærra en 10) þá tekur else skipunin við, forritstextinn innan slaufusviganna eftir else skipunina er þá keyrður. Í dæminu hér fyrir ofan er athugað hvort x sé stærra en 10, ef svo er þá er 5 plúsað við gildi breytunnar, en ef svo er ekki þá er 5 dregið frá gildi x. \r\n Prófa þú núna að skrifa einfalt forrit sem gerir samanburð á breytu x þannig að ef x er stærra eða jafnt og 100 þá er x helmingað, en ef svo er ekki þá er gildið fimmfaldað. Við munum skilgreina breytuna x fyrri ykkur svo þið þurfið ekki að skilgreina hana með var x",
+    "lessonFunction": "lessonThree(req.body.codeFromUser)"
+  },
+  "lessonfour": {
+    "feedback": "Vel gert, svona virka if og else skipanir í grófum dráttum.",
+    "path": "lessonfive",
+    "instructions": " Næsta viðfangsefni eru lykkjur. Lykkjur eru mikið notaðar í forritun. Skoðum dæmi: \r\n var x = 0; \r\n while(x<10) { \r\n x = x+1 \r\n }. \r\n Þetta er ofureinfalt dæmi um svokallaðar while-lykkju. innan sviganna (...) er sett eitthvað skilyrði, og svo lengi sem þetta skilyrði er uppfyllt er forritstextinn innan slaufusviganna {...} keyrður. Í þessu dæmi er keyrt x=x+1 svo lengi sem x<10. Svo lengi sem x er minna en 10 þá er x hækkað um töluna 1. Það er auðvelt að sannfæra sig um að þessi while-lykkja er keyrð 10 sinnum í þessu dæmi. Breytan x byrjar í 0 og endar í 10, þegar búið er að hækka x uppí 10 þá er skilyrðið (x<10) ekki lengur uppfyllt og lykkjan hættir. \r\n Prófið að gera while lykkju sem reiknar summuna frá 0 og uppí 10, setjið summuna ykkar í breytuna sum.",
+    "lessonFunction": "lessonFour(req.body.codeFromUser)"
+  },
+  "lessonfive": {
+    "feedback": "Vel gert, ",
+    "path": "lessonsix",
+    "instructions": "Instructions for lesson six",
+    "lessonFunction": "lessonFive(req.body.codeFromUser)"
+  },
+  "lessonsix": {
+    "feedback": "Vel gert",
+    "path": "lessonseven",
+    "instructions": "Instructions for lesson seven",
+    "lessonFunction": "lessonSix(req.body.codeFromUser)"
+  },
+  "lessonseven": {
+    "feedback": "Vel gert",
+    "path": "lessoneight",
+    "instructions": "Instructions for lesson eight",
+    "lessonFunction": "lessonSeven(req.body.codeFromUser)"
+  },
+  "lessoneight": {
+    "feedback": "Vel gert",
+    "path": "lessonnine",
+    "instructions": "Instructions for lesson nine",
+    "lessonFunction": "lessonEight(req.body.codeFromUser)"
+  },
+  "lessonnine": {
+    "feedback": "Vel gert",
+    "path": "lessonten",
+    "instructions": "Instructions for lesson ten",
+    "lessonFunction": "lessonNine(req.body.codeFromUser)"
+  }
+}
